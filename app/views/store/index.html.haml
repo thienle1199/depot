@@ -1,0 +1,9 @@
+%p#notice= notice
+%h1 Your Pragmatic Catalog
+- @products.each do |product|
+    .entry
+        = image_tag product.image_url
+        %h3= link_to product.title, product_path(product)
+        %p= sanitize product.description
+        .price_line
+            %span.price= number_to_currency product.price
