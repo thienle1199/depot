@@ -3,11 +3,11 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: <%= Faker::Placeholdit.image('100x100') %>
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: <%= Faker::Placeholdit.image('100x100') %>
   price: 9.99

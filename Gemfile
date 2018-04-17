@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 gem 'haml'
 gem "haml-rails"
+gem 'faker'
+gem 'bootstrap', '~> 4.1.0'
+gem 'sprockets-rails'
+gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
