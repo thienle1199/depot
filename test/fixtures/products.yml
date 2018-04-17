@@ -11,3 +11,9 @@ two:
   description: MyText
   image_url: <%= Faker::Placeholdit.image('100x100') %>
   price: 9.99
+
+three:
+  title: Programming Ruby
+  description: MyText
+  image_url: <%= Faker::Placeholdit.image('100x100') %>
+  price: 9.99
