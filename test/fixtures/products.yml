@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: Ruby on rails
   description: MyText
   image_url: <%= Faker::Placeholdit.image('100x100') %>
   price: 9.99
