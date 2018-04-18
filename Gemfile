@@ -35,6 +35,7 @@ gem 'faker'
 gem 'bootstrap', '~> 4.1.0'
 gem 'sprockets-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

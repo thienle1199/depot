@@ -12,6 +12,8 @@
 //
 //= require rails-ujs
 //= require jquery3
+//= require jquery-ui/effects/effect-blind
+
 //= require popper
 //= require bootstrap-sprockets
 //= require activestorage
