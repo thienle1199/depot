@@ -13,6 +13,8 @@
       %span.title= @page_title
     #column
       #side
+        #cart
+          = render @cart if @cart
         %ul
           %li= link_to 'Home', '#'
           %li= link_to 'Question', '#'
