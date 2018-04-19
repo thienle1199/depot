@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+  get 'admin', to: 'admin#index'
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  resources :users
   default_url_options :host => "localhost:3000"
   resources :orders
   resources :line_items

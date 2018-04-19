@@ -8,3 +8,17 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+class ActionDispatch::IntegrationTest
+  def login_as(user)
+    post login_url, params: {session: {name: user.name, password: 'secret'}}
+  end
+
+  def logout
+    delete logout_path
+  end
+
+  def setup
+    login_as users(:one)
+  end
+end

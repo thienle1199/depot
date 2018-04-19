@@ -1,0 +1,17 @@
+- if flash[:alert]
+  #notice= flash[:alert]
+
+= form_for(:session, url: login_path) do |f|
+  %fieldset
+    %legend Please Log In
+    %div
+      = f.label :name
+      = f.text_field :name
+    %div
+      = f.label :password
+      = f.password_field :password
+    
+      %div
+        = f.submit "login"
+    
+  
