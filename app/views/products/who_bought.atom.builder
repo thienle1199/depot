@@ -18,7 +18,7 @@ atom_feed do |feed|
 						xhtml.tr do
 							xhtml.td item.product.title
 							xhtml.td item.quantity
-							xhtml.td number_to_currency item.price
+							xhtml.td number_to_currency item.total_price
 						end
 					end
 					xhtml.tr do
