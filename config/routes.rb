@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  default_url_options :host => "localhost:3000"
   get 'admin/index'
   get 'admin', to: 'admin#index'
 
@@ -7,12 +8,14 @@ Rails.application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
+  
   resources :users
-  default_url_options :host => "localhost:3000"
-  resources :orders
-  resources :line_items
-  resources :carts
-  root 'store#index'
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index'
+  end
   resources :products do
     get :who_bought, on: :member
   end

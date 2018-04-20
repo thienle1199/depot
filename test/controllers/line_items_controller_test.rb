@@ -17,7 +17,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create line_item" do
     assert_difference('LineItem.count') do
-      post line_items_url, params: { product_id: products(:one).id }
+      post line_items_path, params: { product_id: '298486374', cart_id: '980190962' }
     end
 
       follow_redirect!
@@ -26,23 +26,23 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show line_item" do
-    get line_item_url(@line_item)
+    get line_item_url(@line_item,locale: I18n.locale)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_line_item_url(@line_item)
+    get edit_line_item_url(@line_item, locale: I18n.locale)
     assert_response :success
   end
 
   test "should update line_item" do
-    patch line_item_url(@line_item), params: { line_item: { Product_id: @line_item.product_id} }
+    patch line_item_url(@line_item, locale: I18n.locale), params: { line_item: { Product_id: @line_item.product_id}, locale: I18n.locale }
     assert_redirected_to line_item_url(@line_item)
   end
 
   test "should destroy line_item" do
     assert_difference('LineItem.count', -1) do
-      delete line_item_url(@line_item)
+      delete line_item_url(@line_item, locale: I18n.locale)
     end
 
     assert_redirected_to line_items_url

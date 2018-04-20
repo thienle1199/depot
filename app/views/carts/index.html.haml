@@ -10,9 +10,9 @@
   %tbody
     - @carts.each do |cart|
       %tr
-        %td= link_to 'Show', cart
-        %td= link_to 'Edit', edit_cart_path(cart)
-        %td= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', cart_path(cart, locale: I18n.locale)
+        %td= link_to 'Edit', edit_cart_path(cart, locale: I18n.locale)
+        %td= link_to 'Destroy', cart_path(cart, locale: I18n.locale), method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

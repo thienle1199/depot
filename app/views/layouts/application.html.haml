@@ -9,6 +9,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body{ class: controller.controller_name }
     #banner
+      = render 'layouts/locale_switch'
       = image_tag 'logo', alt: 'The Pragmatic Bookshelf'
       %span.title= @page_title
     #column
@@ -16,10 +17,10 @@
         #cart
           = render @cart if @cart
         %ul
-          %li= link_to 'Home', root_url
-          %li= link_to 'Question', '#'
-          %li= link_to 'New', '#'
-          %li= link_to 'Contact', '#'
+          %li= link_to t('.home'), '#'
+          %li= link_to t('.questions'), '#'
+          %li= link_to t('.news'), '#'
+          %li= link_to t('.contact'), '#'
         - if session[:user_id]
           %ul
             %li= link_to 'Orders', orders_path
