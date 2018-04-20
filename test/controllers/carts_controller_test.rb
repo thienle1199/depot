@@ -15,13 +15,7 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create cart" do
-    assert_difference('Cart.count') do
-      post carts_url, params: { cart: {  }, locale: I18n.locale }
-    end
-
-    assert_redirected_to cart_url(Cart.last)
-  end
+ 
 
   test "should show cart" do
     get cart_url(@cart, locale: I18n.locale)
@@ -34,8 +28,8 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cart" do
-    patch cart_url(@cart), params: { cart: {  } }
-    assert_redirected_to cart_url(@cart, locale: I18n.locale)
+    patch cart_url(@cart, locale: I18n.locale), params: { cart: {  } }
+    assert_redirected_to cart_url(@cart)
   end
 
   test "should destroy cart" do
